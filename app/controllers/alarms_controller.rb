@@ -1,6 +1,6 @@
 class AlarmsController < ApplicationController
   def index
-    @alarms = Alarm.all
+    @alarms = Alarm.all.order(value: :desc)
   end
 
   def new
