@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 feature 'user upvotes an alarm' do
-  scenario 'successfully' do
+  scenario 'upvotes successfully' do
     visit root_path
 
     find('ul > li:first-child')

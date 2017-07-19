@@ -17,5 +17,17 @@ class AlarmsController < ApplicationController
     params.require(:alarm).permit(:title)
   end
 
+  def upvote
+    alarm = Alarm.find(params[:alarm_id])
+    alarm.upvote
+    redirect_to alarms_url
+  end
+
+  def downvote
+    alarm = Alarm.find(params[:alarm_id])
+    alarm.downvote
+    redirect_to alarms_url
+  end
+
 
 end

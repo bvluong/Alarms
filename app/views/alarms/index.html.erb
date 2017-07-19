@@ -8,6 +8,7 @@
   <%=alarm.title%>
   <h4><%= alarm.value %></h4>
   <%= button_to "Upvote", alarm_upvote_url(alarm) %>
+  <%= button_to "Downvote", alarm_downvote_url(alarm) %>
   </li>
 
   <%end %>
