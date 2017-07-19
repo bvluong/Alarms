@@ -4,6 +4,10 @@
 
 <ul class="alarms">
   <% @alarms.each do |alarm|  %>
-  <li> <%=alarm.title%>  </li>
+  <li>
+  <%=alarm.title%>
+  <%= button_to "Upvote", alarm_upvote_url(alarm) %>
+  </li>
+
   <%end %>
 </ul>
