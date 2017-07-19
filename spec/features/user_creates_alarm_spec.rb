@@ -8,6 +8,6 @@ feature 'user creates alarms' do
     fill_in "Title", with: "Construction Noise"
     click_on "Submit"
 
-    expect(page).to have_css ".todos li", text: "Construction Noise"
+    expect(page).to have_css ".alarms li", text: "Construction Noise"
   end
 end
