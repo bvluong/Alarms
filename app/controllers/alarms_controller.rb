@@ -8,7 +8,8 @@ class AlarmsController < ApplicationController
   end
 
   def create
-    Alarm.create(alarm_params)
+    alarm = Alarm.create(alarm_params)
+    alarm.save
     redirect_to alarms_url
   end
 
